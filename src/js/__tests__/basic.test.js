@@ -1,7 +1,19 @@
-import sum from '../basic';
+import getHealthStatus from '../basic';
 
-test('should sum', () => {
-  const result = sum([1, 2, 3]);
+test('Status: healthy', () => {
+  const result = getHealthStatus({ name: 'Char', health: 95 });
 
-  expect(result).toBe(6);
+  expect(result).toBe('healthy');
+});
+
+test('Status: wounded', () => {
+  const result = getHealthStatus({ name: 'Char', health: 45 });
+
+  expect(result).toBe('wounded');
+});
+
+test('Status: critical', () => {
+  const result = getHealthStatus({ name: 'Char', health: 5 });
+
+  expect(result).toBe('critical');
 });
