@@ -2,7 +2,6 @@
   "name": "unit_test_func",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
